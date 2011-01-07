@@ -1,0 +1,70 @@
+; Info for the admin themes page
+; ------------------------------
+name = five
+description = five is HTML
+version = 0.1
+
+; Set the Drupal version this theme can be used with
+; ------------------------------
+package = Core
+core = 7.x
+
+; For sub-themes, uncomment 'base theme' and comment out 'engine'
+; ------------------------------
+engine = phptemplate
+; base theme = five
+
+; regions
+regions[page_top] = Above page
+regions[preheader_first] = Preheader first
+regions[preheader_second] = Preheader second
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlight] = Highlighted content
+regions[help] = System help
+regions[banner] = Banner
+regions[precontent_first] = Precontent first
+regions[precontent_second] = Precontent second
+regions[precontent_third] = Precontent third
+regions[content] = Page content
+regions[sidebar_a] = Sidebar A
+regions[sidebar_b] = Sidebar B
+regions[prefooter_first] = Prefooter first
+regions[prefooter_second] = Prefooter second
+regions[prefooter_third] = Prefooter third
+regions[footer_first] = Footer first
+regions[footer_second] = Footer second
+regions[copyright] = Copyright
+regions[page_bottom] = Below page
+regions[copyright] = Copyright
+
+; layouts
+configurations[fixed][3-col][abc] = default
+configurations[fixed][3-col][acb] = default
+configurations[fixed][3-col][cab] = default
+configurations[fixed][2-col][ac] = default
+configurations[fixed][2-col][bc] = default
+configurations[fixed][2-col][ca] = default
+configurations[fixed][2-col][cb] = default
+configurations[fixed][1-col][c] = default
+
+layout[<global>] = body-layout-fixed-acb
+
+; palette
+palette[id] = "A6B5FE5D-F47F-0423-72D586795716536C"
+palette[name] = 'Five'
+palette[author] = 'Acquia'
+palette[white][hex] = 'ffffff'
+palette[white][name] = 'White'
+palette[black][hex] = '000000'
+palette[black][name] = 'Black'
+palette[a][hex] = '333333'
+palette[a][name] = 'Dark Gray'
+palette[b][hex] = '551a8b'
+palette[b][name] = 'HTML Purple'
+palette[c][hex] = '666666'
+palette[c][name] = 'Medium Gray'
+palette[d][hex] = '0000ee'
+palette[d][name] = 'HTML Blue'
+palette[e][hex] = '999999'
+palette[e][name] = 'Gray'

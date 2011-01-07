@@ -1,0 +1,115 @@
+/* @group Elements */
+
+/* @group Block */
+
+.wireframe section,
+.wireframe article {
+  outline: 1px dotted black;
+  padding: 2%;
+}
+
+.wireframe article {
+  background-color: rgba(150, 225, 150, 0.8);
+}
+
+.wireframe hr {
+  display: none;
+}
+
+.wireframe p,
+.wireframe ul, .wireframe ol, .wireframe dl,
+.wireframe form, .wireframe table,
+.wireframe address, .wireframe q, .wireframe del, 
+.wireframe pre, .wireframe code, .wireframe ins, .wireframe noscript,
+.wireframe time {
+  display: none;
+}
+
+/* @end */
+
+/* @group Headings */
+
+.wireframe h1 {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.wireframe h1 a {
+  color: #ffffff;
+}
+
+.wireframe h2 {
+  background-color: #505060;
+  color: #ffffff;
+  margin-left: 2%;
+}
+
+.wireframe h2 a {
+  color: #ffffff;
+}
+
+.wireframe h3 {
+  background-color: #608080;
+  color: #ffffff;
+  margin-left: 4%;
+}
+
+.wireframe h3 a {
+  color: #ffffff;
+}
+
+.wireframe h4 {
+  background-color: #30b0b0;
+  color: #ffffff;
+  margin-left: 6%;
+}
+
+.wireframe h4 a {
+  color: #ffffff;
+}
+
+.wireframe h5 {
+  background-color: #00d0d0;
+  color: #ffffff;
+  margin-left: 8%;
+}
+
+.wireframe h5 a {
+  color: #ffffff;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Layout */
+
+/* @group Wrappers */
+
+.wireframe .wrapper {
+  text-align: left;
+}
+
+/* @end */
+
+/* @group Stacks */
+
+.wireframe .stack {
+  margin: 0;
+  width: auto;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Components */
+
+.wireframe .links,
+.wireframe .breadcrumb,
+.wireframe #logo,
+.wireframe .field {
+  display: none;
+}
+
+/* @end */

@@ -1,0 +1,281 @@
+/* @group Framework */
+
+/* @group Elements */
+
+html {
+  font-family: "Helvetica Neue", helvetica, arial sans-serif;
+}
+
+/* @group Block */
+
+header, 
+section, 
+footer,
+aside,
+nav,
+menu,
+article,
+figure,
+div {
+  display: block;
+}
+
+/* @end */
+
+/* @group Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+h2 {
+  font-size: 1.25em;
+}
+
+h3 {
+  font-size: 1.1875em;
+}
+
+h4 {
+  font-size: 1.0667em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+/* @end */
+
+/* @group Inline */
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {}
+
+a:focus,
+a:active {}
+
+/* @end */
+
+/* @end */
+
+/* @group Layout */
+
+body {
+  position: relative;
+}
+
+/* @group Wrappers */
+
+.wrapper {
+  position: relative;
+  text-align: center;
+}
+
+/* @end */
+
+/* @group Stacks */
+
+.stack {
+  margin: 0 auto;
+  text-align: left;
+  width: 960px;
+}
+
+/* @end */
+
+/* @group Position */
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* @end */
+
+/* @group Grid */
+
+.sidebar {
+  width: 220px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Components */
+
+/* @end */
+
+/* @group Media queries */
+
+/* @group Proprtional leading */
+
+@media all and (max-width : 900px) {
+
+section {
+line-height : 1.4; }
+
+}
+
+@media all and (max-width : 800px) {
+
+section {
+line-height : 1.3; }
+
+}
+
+/* @end */
+
+/* @group Smartphones (portrait and landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+.csscolumns div.cols {
+-moz-column-count : 1;
+-moz-column-width : auto;
+-moz-column-gap : 0; 
+-moz-column-rule-width : 0;
+-o-column-count : 1;
+-o-column-width : auto;
+-o-column-gap : 0; 
+-o-column-rule-width : 0;
+-webkit-column-count : 1;
+-webkit-column-width : auto;
+-webkit-column-gap : 0; 
+-webkit-column-rule-width : 0; 
+column-width : auto;
+column-gap : 0;
+column-rule-width : 0; 
+column-column-count : 1; } 
+
+}
+
+/* @end */
+
+/* @group Smartphones (landscape) */
+@media only screen and (min-width : 321px) {
+
+}
+
+/* @end */
+
+/* @group Smartphones (portrait) */
+@media only screen and (max-width : 320px) {
+
+}
+
+/* @end */
+
+/* @group iPads (portrait and landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}
+
+/* @end */
+
+/* @group iPads (landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+
+}
+
+/* @end */
+
+/* @group iPads (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)) {
+
+.csscolumns div.cols {
+-moz-column-count : 2;
+-moz-column-width : auto;
+-moz-column-gap : 80px; 
+-moz-column-rule : 1px solid rgb(100,97,113);
+-o-column-count : 2;
+-o-column-width : auto;
+-o-column-gap : 80px; 
+-o-column-rule : 1px solid rgb(100,97,113);
+-webkit-column-count : 2;
+-webkit-column-width : auto;
+-webkit-column-gap : 80px; 
+-webkit-column-rule : 1px solid rgb(100,97,113); 
+column-column-count : 2;
+column-width : auto;
+column-gap : 80px;
+column-rule : 1px solid rgb(100,97,113); }
+
+}
+
+/* @end */
+
+/* @group Desktops and laptops */
+@media only screen and (min-width : 1224px) {
+
+}
+
+/* @end */
+
+/* @group Large screens */
+@media only screen and (min-width : 1824px) {
+
+}
+
+/* @end */
+
+/* @group iPhone 4 and high device-pixel-ratio devices */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Clears */
+
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* @end */
+
+/* @group Devel */
+
+ul.krumo-node,
+ul.krumo-node ul,
+ul.krumo-node li {
+  display: block;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Content */
+
+body > header {
+  background-color: #ffffef;
+}
+
+/* @end */
