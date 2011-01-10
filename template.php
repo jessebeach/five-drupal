@@ -7,19 +7,19 @@ function five_preprocess_html(&$vars) {
   // array_push($vars['classes_array'], 'typology');
   // Add CSS
   drupal_add_css(path_to_theme() . '/css/basic.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/css/dev/wireframe.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/css/dev/typology.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/css/outliner/outliner.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
+  drupal_add_css(path_to_theme() . '/plugins/dev/wireframe.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
+  drupal_add_css(path_to_theme() . '/plugins/dev/typology.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
+  drupal_add_css(path_to_theme() . '/plugins/semanticOutliner/outliner.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
   drupal_add_css(path_to_theme() . '/css/ie/ie-7.css', array('group' => CSS_THEME, 'media' => 'screen', 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
   drupal_add_css(path_to_theme() . '/css/ie/ie-8.css', array('group' => CSS_THEME, 'media' => 'screen', 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'preprocess' => FALSE));
   // Add JavaScript
   drupal_add_library('system','ui.dialog');
-  drupal_add_js(path_to_theme() . '/js/jquery.plugins/jquery.outliner-0.1.js');
+  drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js');
   // html5.js is required for IE to understand the new elements like article
   // @see http://remysharp.com/2009/01/07/html5-enabling-script/
   drupal_add_js(path_to_theme() . '/js/html5.js');
   drupal_add_js(path_to_theme() . '/js/basic.js');
-  drupal_add_js(path_to_theme() . '/js/modernizr-1.6.min.js');
+  drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js');
   //kpr($vars);
 }
 
