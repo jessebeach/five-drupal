@@ -1,0 +1,3 @@
+[submodule "plugins/semanticOutliner"]
+	path = plugins/semanticOutliner
+	url = git@github.com:jessebeach/semanticOutliner.git
