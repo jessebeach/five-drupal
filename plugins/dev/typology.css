@@ -1,0 +1,118 @@
+/* @group Elements */
+
+/* @group Block */
+
+.typology header, 
+.typology section, 
+.typology footer,
+.typology aside,
+.typology nav,
+.typology menu,
+.typology article,
+.typology figure,
+.typology div {
+  padding: 10px;
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.3333);
+}
+
+.typology header {
+  background-color: lightgreen;
+}
+
+.typology header::before {
+  content: "header";
+}
+
+.typology footer {
+  background-color: lightyellow;
+}
+
+.typology footer::before {
+  content: "footer";
+}
+
+.typology section {
+  outline: 1px dotted red;
+  background-color: wheat;
+}
+
+.typology section section {
+  outline: 2px dashed white;
+  background-color: gold;
+}
+
+.typology section::before {
+  content: "section";
+}
+
+.typology section section::before {
+  content: "embedded section";
+}
+
+.typology article {
+  outline: 1px dotted black;
+  background-color: #aaa;
+}
+
+.typology article article {
+  outline: 2px dashed white;
+  background-color: #ccc;
+}
+
+.typology article::before {
+  content: "article";
+}
+
+.typology article article::before {
+  content: "embedded article";
+}
+
+.typology nav::before {
+  content: "nav";
+}
+
+.typology aside::before {
+  content: "aside";
+}
+
+.typology header div::before,
+.typology section div::before,
+.typology footer div::before,
+.typology nav div::before,
+.typology aside div::before {
+  content: "div";
+}
+
+.typology .krumo-root::before,
+.typology .krumo-root div::before {
+  display: none;
+}
+
+.typology *::before,
+.typology *::after {
+  background-color: #545454;
+  -moz-border-radius: 3px;
+  color: #f0f0f0;
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1pt;
+  padding: 2px 3px 1px 5px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* @end */
+
+/* @end */
+
+/* @group Layout */
+
+/* @group Stacks */
+
+.typology stack {
+  outline: 1px dashed pink;
+}
+
+/* @end */
+
+/* @end */
