@@ -4,3 +4,6 @@
 [submodule "plugins/Modernizr"]
 	path = plugins/Modernizr
 	url = https://github.com/Modernizr/Modernizr.git
+[submodule "plugins/960grid"]
+	path = plugins/960grid
+	url = https://github.com/nathansmith/960-Grid-System.git

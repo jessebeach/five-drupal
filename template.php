@@ -6,20 +6,35 @@ function five_preprocess_html(&$vars) {
   // Apply the typology for a colored, bas-relief view of the page structure
   // array_push($vars['classes_array'], 'typology');
   // Add CSS
-  drupal_add_css(path_to_theme() . '/css/basic.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/plugins/dev/wireframe.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/plugins/dev/typology.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/plugins/semanticOutliner/outliner.css', array('group' => CSS_THEME, 'media' => 'screen', 'preprocess' => TRUE));
-  drupal_add_css(path_to_theme() . '/css/ie/ie-7.css', array('group' => CSS_THEME, 'media' => 'screen', 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
-  drupal_add_css(path_to_theme() . '/css/ie/ie-8.css', array('group' => CSS_THEME, 'media' => 'screen', 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE), 'preprocess' => FALSE));
+  // Give IE6 and below a basic typography stylesheet. No need to worry about this browser any further
+  drupal_add_css('http://universal-ie6-css.googlecode.com/files/ie6.0.3.css', array('type' => 'external', 'group' => CSS_THEME, 'media' => 'all', 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE),));
+  // Add stylesheets for modern browsers
+  drupal_add_css(path_to_theme() . '/css/screen.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  drupal_add_css(path_to_theme() . '/css/print.css', array('group' => CSS_THEME, 'media' => 'print', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  // Aural and tactile
+  drupal_add_css(path_to_theme() . '/css/aural.css', array('group' => CSS_THEME, 'media' => 'aural, speech, tty',));
+  drupal_add_css(path_to_theme() . '/css/tactile.css', array('group' => CSS_THEME, 'media' => 'braille, embossed',));
+  // Grid
+  drupal_add_css(path_to_theme() . '/plugins/960grid/code/css/960_24_col.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  // Plugin stylesheets
+  drupal_add_css(path_to_theme() . '/plugins/dev/wireframe.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  drupal_add_css(path_to_theme() . '/plugins/dev/typology.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  drupal_add_css(path_to_theme() . '/plugins/semanticOutliner/outliner.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  // IE7+
+  drupal_add_css(path_to_theme() . '/css/ie/ie-7.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE),));
+  drupal_add_css(path_to_theme() . '/css/ie/ie-8.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE),));
+  drupal_add_css(path_to_theme() . '/css/ie/ie-9.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE),));
   // Add JavaScript
-  drupal_add_library('system','ui.dialog');
-  drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js');
   // html5.js is required for IE to understand the new elements like article
   // @see http://remysharp.com/2009/01/07/html5-enabling-script/
-  drupal_add_js(path_to_theme() . '/js/html5.js');
-  drupal_add_js(path_to_theme() . '/js/basic.js');
-  drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js');
+  drupal_add_js(path_to_theme() . '/js/html5.js', array('every_page' => TRUE, 'group' => JS_THEME));
+  drupal_add_js(path_to_theme() . '/js/basic.js', array('every_page' => TRUE, 'group' => JS_THEME));
+  // jQuery
+  drupal_add_library('system','ui.dialog');
+  // Other plugins
+  drupal_add_js(path_to_theme() . '/plugins/mediaqueries/jquery.mediaqueries.js', array('every_page' => TRUE, 'group' => JS_THEME));
+  drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js', array('every_page' => TRUE, 'group' => JS_THEME));
+  drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js', array('every_page' => TRUE, 'group' => JS_THEME));
   //kpr($vars);
 }
 
