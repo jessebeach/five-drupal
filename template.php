@@ -8,7 +8,7 @@ function five_preprocess_html(&$vars) {
   // Add CSS
   // Give IE6 and below a basic typography stylesheet. No need to worry about this browser any further
   drupal_add_css('http://universal-ie6-css.googlecode.com/files/ie6.0.3.css', array('type' => 'external', 'group' => CSS_THEME, 'media' => 'all', 'browsers' => array('IE' => 'IE 6', '!IE' => FALSE),));
-  // Add stylesheets for modern browsers
+  // Screen and print
   drupal_add_css(path_to_theme() . '/css/screen.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   drupal_add_css(path_to_theme() . '/css/print.css', array('group' => CSS_THEME, 'media' => 'print', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   // Aural and tactile
@@ -27,14 +27,14 @@ function five_preprocess_html(&$vars) {
   // Add JavaScript
   // html5.js is required for IE to understand the new elements like article
   // @see http://remysharp.com/2009/01/07/html5-enabling-script/
-  drupal_add_js(path_to_theme() . '/js/html5.js', array('every_page' => TRUE, 'group' => JS_THEME));
-  drupal_add_js(path_to_theme() . '/js/basic.js', array('every_page' => TRUE, 'group' => JS_THEME));
+  drupal_add_js(path_to_theme() . '/js/html5.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
+  drupal_add_js(path_to_theme() . '/js/basic.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
   // jQuery
   drupal_add_library('system','ui.dialog');
   // Other plugins
-  drupal_add_js(path_to_theme() . '/plugins/mediaqueries/jquery.mediaqueries.js', array('every_page' => TRUE, 'group' => JS_THEME));
-  drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js', array('every_page' => TRUE, 'group' => JS_THEME));
-  drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js', array('every_page' => TRUE, 'group' => JS_THEME));
+  drupal_add_js(path_to_theme() . '/plugins/mediaqueries/jquery.mediaqueries.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
+  drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
+  drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
   //kpr($vars);
 }
 
