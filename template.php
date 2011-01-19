@@ -35,7 +35,6 @@ function five_preprocess_html(&$vars) {
   drupal_add_js(path_to_theme() . '/plugins/mediaqueries/jquery.mediaqueries.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
   drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
   drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
-  kpr($vars);
 }
 
 function five_preprocess_page(&$vars) {
@@ -110,7 +109,7 @@ function five_preprocess_node(&$node) {
     }
   }
   $node['content']['links']['#attributes']['class'] = $link_classes;
-  kpr($node);
+  //kpr($node);
 }
 
 /**
