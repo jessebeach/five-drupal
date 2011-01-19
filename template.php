@@ -110,7 +110,7 @@ function five_preprocess_node(&$node) {
     }
   }
   $node['content']['links']['#attributes']['class'] = $link_classes;
-  //kpr($node);
+  kpr($node);
 }
 
 /**
