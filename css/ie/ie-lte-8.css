@@ -1,0 +1,18 @@
+/* @group Wrappers */
+
+.wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+
+/* @end */
+
+/* @group Stacks */
+
+.stack {
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* @end */

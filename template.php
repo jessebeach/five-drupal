@@ -20,9 +20,12 @@ function five_preprocess_html(&$vars) {
   drupal_add_css(path_to_theme() . '/plugins/dev/wireframe.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   drupal_add_css(path_to_theme() . '/plugins/dev/typology.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   drupal_add_css(path_to_theme() . '/plugins/semanticOutliner/outliner.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  // Theme style (colors, padding, font, etc)
+  drupal_add_css(path_to_theme() . '/css/five.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => true, '!IE' => true),));
   // IE7+
   drupal_add_css(path_to_theme() . '/css/ie/ie-7.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE),));
   drupal_add_css(path_to_theme() . '/css/ie/ie-8.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE 8', '!IE' => FALSE),));
+  drupal_add_css(path_to_theme() . '/css/ie/ie-lte-8.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE lte 8', '!IE' => FALSE),));
   drupal_add_css(path_to_theme() . '/css/ie/ie-9.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'IE 9', '!IE' => FALSE),));
   // Add JavaScript
   // html5.js is required for IE to understand the new elements like article
@@ -35,7 +38,8 @@ function five_preprocess_html(&$vars) {
   drupal_add_js(path_to_theme() . '/plugins/mediaqueries/jquery.mediaqueries.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
   drupal_add_js(path_to_theme() . '/plugins/semanticOutliner/jquery.semanticOutliner.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
   drupal_add_js(path_to_theme() . '/plugins/selectivizr/selectivizr.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
-  // this is a change
+  // Modernizr tests an agent's capabilites and adds classes to the html tag representing them
+  drupal_add_js(path_to_theme() . '/plugins/Modernizr/modernizr.js', array('every_page' => TRUE, 'scope' => 'footer', 'group' => JS_THEME,));
 }
 
 function five_preprocess_page(&$vars) {
@@ -65,8 +69,6 @@ function five_preprocess_page(&$vars) {
       'heading' => t('Secondary menu')
     )
   );
-  //$vars['page']['sidebar_a']['#theme_wrappers'][0] = 'container';
-  //kpr($vars);
 }
 
 function five_preprocess_block(&$block) {

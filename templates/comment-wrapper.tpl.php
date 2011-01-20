@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Local theme implementation of comment-wrapper.tpl.php.
+ * Five theme implementation of comment-wrapper.tpl.php.
  *
  * Available variables:
  * - $content: The array of content-related elements for the node. Use

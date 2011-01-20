@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Local theme implementation of comments.tpl.php.
+ * Five theme implementation of comments.tpl.php.
  *
  * Available variables:
  * - $author: Comment author. Can be link or plain text.

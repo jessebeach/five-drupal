@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Default theme implementation to display a single Drupal page.
+ * Five theme implementation to display a single Drupal page.
  *
  * Available variables:
  *
@@ -73,7 +73,7 @@
 
 <header role="banner" class="wrapper">
   <div class="stack clearfix">
-    <?php if ($logo): ?>
+    <?php if (!empty($logo)): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
@@ -99,6 +99,7 @@
 
 <?php if ($primary_links): ?>
   <nav role="navigation" class="wrapper">
+    <a name="navigation"></a>
     <div class="stack clearfix">
       <?php print $primary_links ?>
     </div>
@@ -147,6 +148,9 @@
   </div>
   
   <div class="stack clearfix">
+    <section class="clearfix" role="main">
+      <?php print render($page['content']); ?>
+    </section>
   
     <?php if ($page['sidebar_a']): ?>
       <hr />
@@ -161,10 +165,6 @@
         <?php print render($page['sidebar_b']); ?>
       </aside> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
-    
-    <section class="clearfix" role="main">
-      <?php print render($page['content']); ?>
-    </section>
   </div>
 </div>
 

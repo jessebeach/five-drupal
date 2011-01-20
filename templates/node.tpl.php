@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Default theme implementation to display a node.
+ * Five theme implementation to display a node.
  *
  * Available variables:
  * - $title: the (sanitized) title of the node.

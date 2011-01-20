@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Default theme implementation to display the basic html structure of a single
+ * Five theme implementation to display the basic html structure of a single
  * Drupal page.
  *
  * Variables:
