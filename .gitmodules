@@ -7,3 +7,6 @@
 [submodule "plugins/960grid"]
 	path = plugins/960grid
 	url = https://github.com/nathansmith/960-Grid-System.git
+[submodule "plugins/fluid960grid"]
+	path = plugins/fluid960grid
+	url = git@github.com:jessebeach/fluid960gs.git
