@@ -14,6 +14,10 @@ core = 7.x
 engine = phptemplate
 ; base theme = five
 
+; Knock out core stylesheets
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.theme.css
+
 ; regions
 regions[page_top] = Above page
 regions[header] = Header

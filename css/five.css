@@ -6,12 +6,17 @@ html {
 
 body {
   background-color: #fff;
+  background-attachment: scroll;
   background-image: none;
   background-image:
+    url("../images/sun_1200px.png"),
+    -moz-radial-gradient(400px 100% 45deg, circle , orange 0pt, rgba(255, 50, 10, 0.8) 300px, rgba(225, 10, 0, 0.2) 520px, rgba(255, 20, 0, 0.2) 530px, rgba(255, 255, 255, 0) 1600px), -moz-linear-gradient(-90deg, rgba(132, 202, 240, 0.5) 0px, rgba(212, 236, 255, 0.5) 50%, rgba(227, 245, 255, 0.333) 100%),
     -moz-linear-gradient(
       -90deg,
-      #efefef 0px,
-      #ffffff 400px);
+      rgba(132, 202, 240, 0.5) 0px, 
+      rgba(212, 236, 255, 0.5) 50%, 
+      rgba(227, 245, 255, 0.3333) 100% ),
+    url("../images/linen-texture.png");
   background-image:
     -webkit-gradient(
       linear,
@@ -25,22 +30,59 @@ body {
       -90deg,
       #efefef 0px,
       #ffffff 400px);
-      
   background-image:
     linear-gradient(
       -90deg,
       #efefef 0px,
       #ffffff 400px);
-  filter: progid:DXImageTransform.Microsoft.gradient(
-    GradientType='0',
-    startColorstr=#efefef, 
-    endColorstr=#ffffff
-  );
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(
-    GradientType='0',
-    startColorstr=#efefef, 
-    endColorstr=#ffffff
-  );
+  background-position: -234px 110%, center center, left top, left top;
+  background-repeat:
+    no-repeat, 
+    no-repeat,
+    no-repeat,
+    repeat;
+  padding-bottom: 350px;
+}
+
+.stack {
+  background-color: white;
+  border-color: #333640;
+  border-style: solid;
+  border-width: 0 10px;
+  -moz-box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.3333);
+  -webkit-box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.3333);
+  box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.3333);
+}
+
+header .stack:first-child {
+  -moz-border-radius: 30px 30px 0 0;
+  border-top-width: 10px;
+  margin-top: 50px;
+}
+
+section .stack:last-child {
+  -moz-border-radius: 0 0 30px 30px;
+  border-bottom-width: 10px;
+  padding-bottom: 36px;
+}
+
+footer.wrapper {
+  background-attachment: scroll;
+  background-color: transparent;
+  background-image:url("../images/aristophanes-clouds_50.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 171px;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+}
+
+footer .stack {
+  background-color: transparent;
+  border: medium none;
+  -moz-box-shadow: none;
 }
 
 hr {

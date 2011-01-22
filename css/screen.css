@@ -175,14 +175,29 @@ column-column-count : 1; }
 /* @end */
 
 @media 
-screen, handheld, projection, tv 
-and (min-width : 960px) {
+screen and (max-width : 959px),
+handheld and (max-width : 959px),
+projection and (max-width : 959px),
+tv and (max-width : 959px) {
+  /* @group Wrappers */
+    .wrapper {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  /* @end */
+}
+
+@media 
+screen and (min-width : 960px),
+handheld and (min-width : 960px),
+projection and (min-width : 960px),
+tv and (min-width : 960px) {
   
   /* @group Wrappers */
   
   .wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 36px;
+    padding-right: 36px;
     text-align: center;
   }
   
@@ -192,41 +207,42 @@ and (min-width : 960px) {
   
   .stack {
     margin: 0 auto;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   
   /* @end */
 }
 
 @media 
-screen, handheld, projection, tv 
-and (min-width : 960px) 
-and (max-width : 1823px) {
+screen and (min-width : 960px) and (max-width : 1823px),
+handheld and (min-width : 960px) and (max-width : 1823px),
+projection and (min-width : 960px) and (max-width : 1823px),
+tv and (min-width : 960px) and (max-width : 1823px) 
+ {
   
   /* @group Stacks */
   
   .stack {
-    max-width: 1600px;
+    max-width: 1003px;
   }
   
   /* @end */
 }
 
 @media 
-screen, handheld, projection, tv 
-and (min-width : 1824px) {
+screen and (min-width : 1824px),
+handheld and (min-width : 1824px),
+projection and (min-width : 1824px), 
+tv and (min-width : 1824px) {
   
   /* @group Stacks */
   
   .stack {
-    max-width: 2400px;
+    max-width: 2000px;
   }
   
   /* @end */
-}
-
-@media 
-screen, handheld, projection, tv 
-and (max-width : 959px) {
 }
 
 /* @group Smartphones (portrait) */
@@ -245,7 +261,9 @@ and (max-device-width : 320px) {
 only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
-
+  body {
+    font-size: 1.5em;
+  }
 }
 
 /* @end */
@@ -255,9 +273,7 @@ and (max-device-width : 1024px) {
 only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
-and (orientation : landscape) {
-
-}
+and (orientation : landscape) {}
 
 /* @end */
 
@@ -265,27 +281,7 @@ and (orientation : landscape) {
 @media 
 only screen and (min-device-width : 768px)
 and (max-device-width : 1024px) 
-and (orientation : portrait)) {
-
-.csscolumns div.cols {
--moz-column-count : 2;
--moz-column-width : auto;
--moz-column-gap : 80px; 
--moz-column-rule : 1px solid rgb(100,97,113);
--o-column-count : 2;
--o-column-width : auto;
--o-column-gap : 80px; 
--o-column-rule : 1px solid rgb(100,97,113);
--webkit-column-count : 2;
--webkit-column-width : auto;
--webkit-column-gap : 80px; 
--webkit-column-rule : 1px solid rgb(100,97,113); 
-column-column-count : 2;
-column-width : auto;
-column-gap : 80px;
-column-rule : 1px solid rgb(100,97,113); }
-
-}
+and (orientation : portrait)) {}
 
 /* @end */
 
@@ -293,9 +289,7 @@ column-rule : 1px solid rgb(100,97,113); }
 
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-
-}
+only screen and (min-device-pixel-ratio : 1.5) {}
 
 /* @end */
 

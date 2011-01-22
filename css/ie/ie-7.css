@@ -1,0 +1,7 @@
+body {
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    GradientType='0',
+    startColorstr=#efefef, 
+    endColorstr=#ffffff
+  );
+}

@@ -95,6 +95,12 @@
     
     <?php print render($page['header']); ?>
   </div>
+  
+  <?php if (!empty($feed_icons)) : ?>
+    <aside class="stack clearfix extras">
+      <?php print $feed_icons; ?>
+    </aside>
+  <?php endif; ?>
 </header> <!-- /.stack, /header -->
 
 <?php if ($primary_links): ?>
@@ -132,25 +138,23 @@
 
 <hr />
 
-<div class="wrapper">
-  <div class="stack clearfix">
-    <?php if ($tabs || $page['help'] || $action_links) : ?>
-      <footer>
-        <?php if ($tabs): ?>
-          <?php print render($tabs); ?>
-        <?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-      </footer>
-    <?php endif; ?>
-  </div>
+<section class="wrapper">
+  <?php if ($tabs || $page['help'] || $action_links) : ?>
+    <footer class="stack clearfix">
+      <?php if ($tabs): ?>
+        <?php print render($tabs); ?>
+      <?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+    </footer>
+  <?php endif; ?>
   
   <div class="stack clearfix">
-    <section class="clearfix" role="main">
+    <div class="clearfix" role="main">
       <?php print render($page['content']); ?>
-    </section>
+    </div>
   
     <?php if ($page['sidebar_a']): ?>
       <hr />
@@ -166,22 +170,14 @@
       </aside> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
   </div>
-</div>
-
-<?php if (!empty($feed_icons)) : ?>
-  <aside class="wrapper">
-    <div class="stack clearfix extras">
-      <?php print $feed_icons; ?>
-    </div>
-  </aside>
-<?php endif; ?>
+</section>
 
 <hr />
 
 <footer role="contentinfo" class="wrapper">
   <div class="stack clearfix">
     <nav class="secondary">
-      <?php print $secondary_links; ?>
+      <?php /* print $secondary_links; */ ?>
     </nav> <!-- /.section, /#navigation -->
     <?php print render($page['footer']); ?>
   </div>
