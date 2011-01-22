@@ -116,3 +116,49 @@
 /* @end */
 
 /* @end */
+
+
+
+@media screen {
+  body::before {
+    background-color: #fff;
+    content: "This is a screen";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+}
+
+@media projection {
+  body::before {
+    background-color: #fff;
+    content: "This is a projector";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+}
+
+@media handheld {
+  body::before {
+    background-color: #fff;
+    content: "This is a handheld";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+}
+
+@media tv {
+  body::before {
+    background-color: #fff;
+    content: "This is a tv";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+  }
+}
