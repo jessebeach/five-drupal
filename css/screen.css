@@ -84,6 +84,8 @@ a:active {}
 /* @group Stacks */
 
 .stack {
+  padding-bottom: 3px;
+  padding-top: 3px;
   text-align: left; /* LTR */
 }
 
@@ -227,6 +229,11 @@ tv and (min-width : 960px) and (max-width : 1823px)
     max-width: 1003px;
   }
   
+  article.hentry > header + * {
+    -moz-column-count: 3;
+    -moz-column-gap: 4em;
+  }
+  
   /* @end */
 }
 
@@ -240,6 +247,11 @@ tv and (min-width : 1824px) {
   
   .stack {
     max-width: 2000px;
+  }
+  
+  article.hentry > header + * {
+    -moz-column-count: 5;
+    -moz-column-width: 2em;
   }
   
   /* @end */

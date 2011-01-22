@@ -23,8 +23,10 @@ function five_preprocess_html(&$vars) {
   //drupal_add_css($theme_path . '/css/drupal/system.theme.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   // Typography
   drupal_add_css($theme_path . '/css/typography.css', array('group' => CSS_THEME, 'media' => 'all', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
-  // Grid
-  drupal_add_css($theme_path . '/plugins/960grid/code/css/960_24_col.css', array('group' => CSS_THEME, 'media' => 'screen and (min-width : 960px), handheld and (min-width : 960px), projection and (min-width : 960px), tv and (min-width : 960px)', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  // Grid Fixed 960
+  // drupal_add_css($theme_path . '/plugins/960grid/code/css/960_24_col.css', array('group' => CSS_THEME, 'media' => 'screen and (min-width : 960px), handheld and (min-width : 960px), projection and (min-width : 960px), tv and (min-width : 960px)', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
+  // Grid Fluid
+  drupal_add_css($theme_path . '/plugins/fluid960grid/css/grid.css', array('group' => CSS_THEME, 'media' => 'screen and (min-width : 960px), handheld and (min-width : 960px), projection and (min-width : 960px), tv and (min-width : 960px)', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   // Plugin stylesheets
   drupal_add_css($theme_path . '/plugins/dev/wireframe.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));
   drupal_add_css($theme_path . '/plugins/dev/typology.css', array('group' => CSS_THEME, 'media' => 'screen, handheld, projection, tv', 'browsers' => array('IE' => 'gte IE 7', '!IE' => true),));

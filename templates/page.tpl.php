@@ -138,9 +138,9 @@
 
 <hr />
 
-<section class="wrapper">
+<section class="wrapper container_16">
   <?php if ($tabs || $page['help'] || $action_links) : ?>
-    <footer class="stack clearfix">
+    <footer class="stack grid_16 clearfix">
       <?php if ($tabs): ?>
         <?php print render($tabs); ?>
       <?php endif; ?>
@@ -152,20 +152,20 @@
   <?php endif; ?>
   
   <div class="stack clearfix">
-    <div class="clearfix" role="main">
+    <div class="grid_10 clearfix" role="main">
       <?php print render($page['content']); ?>
     </div>
   
     <?php if ($page['sidebar_a']): ?>
       <hr />
-      <aside class="sidebar clearfix" role="complementary">
+      <aside class="sidebar grid_3 clearfix" role="complementary">
         <?php print render($page['sidebar_a']); ?>
       </aside> <!-- /.section, /#sidebar-first -->
     <?php endif; ?>
   
     <?php if ($page['sidebar_b']): ?>
       <hr />
-      <aside class="sidebar clearfix" role="complementary">
+      <aside class="sidebar grid_3 clearfix" role="complementary">
         <?php print render($page['sidebar_b']); ?>
       </aside> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
